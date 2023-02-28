@@ -21,3 +21,9 @@ CREATE TABLE owners (
     age INTEGER NOT NULL
 );
 
+-- Create a table named species
+CREATE TABLE species(                                                             
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
+
