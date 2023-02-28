@@ -9,7 +9,7 @@ values
     ('Blossom', '1998-10-13', 17, true, 3),
     ('Ditto', '2022-05-14', -45, true, 4);
 
--- insert data inti 'owners' table
+-- insert data into 'owners' table
 insert into owners(full_name,age) 
 values 
     ('Sam Smith', 34),
@@ -18,3 +18,9 @@ values
     ('Melody Pond', 77),
     ('Dean Winchester', 14),
     ('Jodie Whittaker', 38);
+
+-- insert data into 'species' table
+insert into species(name) 
+values 
+    ('Pokemon'),
+    ('Digimon');
