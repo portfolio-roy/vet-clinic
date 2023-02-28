@@ -27,3 +27,7 @@ CREATE TABLE species(
     name VARCHAR(255)
 );
 
+-- Add column species_id which is a foreign key referencing species table
+ALTER TABLE animals 
+ADD COLUMN species_id INTEGER REFERENCES species(id);
+
