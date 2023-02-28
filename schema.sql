@@ -9,4 +9,8 @@ CREATE TABLE animals (
     weight_kg DECIMAL(5,2) NOT NULL
 );
 
+
 ALTER TABLE animals ADD COLUMN species VARCHAR(255);
+-- Remove column species
+ALTER TABLE animals DROP COLUMN species;
+
