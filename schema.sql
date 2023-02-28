@@ -14,3 +14,10 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(255);
 -- Remove column species
 ALTER TABLE animals DROP COLUMN species;
 
+-- Create a table named owners
+CREATE TABLE owners (                                                             
+    id SERIAL PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    age INTEGER NOT NULL
+);
+
