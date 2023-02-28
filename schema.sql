@@ -31,3 +31,7 @@ CREATE TABLE species(
 ALTER TABLE animals 
 ADD COLUMN species_id INTEGER REFERENCES species(id);
 
+-- Add column owner_id which is a foreign key referencing the owners table
+ALTER TABLE animals 
+ADD COLUMN owner_id INTEGER REFERENCES owners(id);
+
