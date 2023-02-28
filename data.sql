@@ -8,4 +8,13 @@ values
     ('Boarmon', '2005-06-07', 20.4, true, 7),
     ('Blossom', '1998-10-13', 17, true, 3),
     ('Ditto', '2022-05-14', -45, true, 4);
-    
+
+-- insert data inti 'owners' table
+insert into owners(full_name,age) 
+values 
+    ('Sam Smith', 34),
+    ('Jennifer Orwell', 19),
+    ('Bob', 45),
+    ('Melody Pond', 77),
+    ('Dean Winchester', 14),
+    ('Jodie Whittaker', 38);
