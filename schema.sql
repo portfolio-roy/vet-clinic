@@ -8,3 +8,5 @@ CREATE TABLE animals (
     neutered BOOLEAN DEFAULT FALSE,
     weight_kg DECIMAL(5,2) NOT NULL
 );
+
+ALTER TABLE animals ADD COLUMN species VARCHAR(255);
