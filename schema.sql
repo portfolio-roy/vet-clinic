@@ -42,11 +42,21 @@ name VARCHAR(255) NOT NULL,
 age INT,                                   
 date_of_graduation DATE
 );
+-- Create 'specializations' table
+CREATE TABLE specializations (  
+  vet_id INT NOT NULL,
+  species_id INT NOT NULL,
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (species_id) REFERENCES species(id)
+);
+ALTER TABLE specializations ADD CONSTRAINT      unique_specialization
+  UNIQUE (vet_id, species_id);
 
 -- Create 'visits' table
 CREATE TABLE visits (
   vet_id INT NOT NULL,
   animal_id INT NOT NULL,
+  visit_date DATE NOT NULL,
   FOREIGN KEY (vet_id) REFERENCES vets(id),
   FOREIGN KEY (animal_id) REFERENCES animals(id)
 );
