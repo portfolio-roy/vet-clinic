@@ -35,3 +35,11 @@ ADD COLUMN species_id INTEGER REFERENCES species(id);
 ALTER TABLE animals 
 ADD COLUMN owner_id INTEGER REFERENCES owners(id);
 
+-- Create 'vets' table
+CREATE table vets(
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+age INT,                                   
+date_of_graduation DATE
+);
+
