@@ -43,3 +43,10 @@ age INT,
 date_of_graduation DATE
 );
 
+-- Create 'visits' table
+CREATE TABLE visits (
+  vet_id INT NOT NULL,
+  animal_id INT NOT NULL,
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (animal_id) REFERENCES animals(id)
+);
