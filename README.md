@@ -1,4 +1,4 @@
-## Getting Started
+# Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
@@ -41,6 +41,7 @@ After you're finished please remove all the comments and instructions!
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [📝 License](#license)
@@ -121,6 +122,15 @@ Clone this repository to your desired folder:
 - GitHub: [@utsargo](https://github.com/utsargo)
 - Twitter: [@royutsargo](https://twitter.com/royutsargo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **Database performance audit**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
