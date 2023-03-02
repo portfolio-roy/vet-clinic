@@ -54,9 +54,9 @@ ALTER TABLE specializations ADD CONSTRAINT      unique_specialization
 
 -- Create 'visits' table
 CREATE TABLE visits (
-  vet_id INT NOT NULL,
   animal_id INT NOT NULL,
+  vet_id INT NOT NULL,
   visit_date DATE NOT NULL,
-  FOREIGN KEY (vet_id) REFERENCES vets(id),
-  FOREIGN KEY (animal_id) REFERENCES animals(id)
+  FOREIGN KEY (animal_id) REFERENCES animals(id),
+  FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
