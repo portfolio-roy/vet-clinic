@@ -35,3 +35,28 @@ ADD COLUMN species_id INTEGER REFERENCES species(id);
 ALTER TABLE animals 
 ADD COLUMN owner_id INTEGER REFERENCES owners(id);
 
+-- Create 'vets' table
+CREATE table vets(
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+age INT,                                   
+date_of_graduation DATE
+);
+-- Create 'specializations' table
+CREATE TABLE specializations (  
+  vet_id INT NOT NULL,
+  species_id INT NOT NULL,
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (species_id) REFERENCES species(id)
+);
+ALTER TABLE specializations ADD CONSTRAINT      unique_specialization
+  UNIQUE (vet_id, species_id);
+
+-- Create 'visits' table
+CREATE TABLE visits (
+  animal_id INT NOT NULL,
+  vet_id INT NOT NULL,
+  visit_date DATE NOT NULL,
+  FOREIGN KEY (animal_id) REFERENCES animals(id),
+  FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
