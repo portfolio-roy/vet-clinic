@@ -122,6 +122,12 @@ Clone this repository to your desired folder:
 - Twitter: [@royutsargo](https://twitter.com/royutsargo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
 
+👤 **Thomas Obuya**
+
+- GitHub: [@tobuya](https://github.com/tobuya)
+- Twitter: [Twitter](https://twitter.com/MullerTheGreat1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tobuya/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
