@@ -1,6 +1,10 @@
 /* Populate database with sample data. */
 insert into animals(name,date_of_birth,weight_kg,neutered, escape_attempts) 
 values 
+    ('Agumon', '2020-02-03', 10.23, true, 0),
+    ('Gabumon', '2018-11-15', 8, true, 2),
+    ('Devimon', '2017-05-12', 11, true, 5),
+    ('Pikachu', '2021-01-07', 15.04, false, 1),
     ('Charmander', '2020-02-08', -11, false, 0),
     ('Plantmon', '2021-11-15', -5.7, true, 2),
     ('Squirtle', '1993-04-02', -12.13, false, 3),
@@ -12,12 +16,12 @@ values
 -- insert data into 'owners' table
 insert into owners(full_name,age) 
 values 
-    ('sam smith', 34),
-    ('jennifer orwell', 19),
-    ('bob', 45),
-    ('melody pond', 77),
-    ('dean winchester', 14),
-    ('jodie whittaker', 38);
+    ('Sam Smith', 34),
+    ('Jennifer Orwell', 19),
+    ('Bob', 45),
+    ('Melody Pond', 77),
+    ('Dean Winchester', 14),
+    ('Jodie Whittaker', 38);
 
 -- insert data into 'species' table
 insert into species(name) 
@@ -83,3 +87,6 @@ VALUES
   ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), '2020-08-03'),
   ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), '2020-05-24'),
   ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), '2021-01-11');
+
+  INSERT INTO visits (animal_id, vet_id, visit_date) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
