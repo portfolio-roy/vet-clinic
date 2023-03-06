@@ -123,6 +123,18 @@ Clone this repository to your desired folder:
 - Twitter: [@royutsargo](https://twitter.com/royutsargo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
 
+👤 **Thomas Obuya**
+
+- GitHub: [@tobuya](https://github.com/tobuya)
+- Twitter: [Twitter](https://twitter.com/MullerTheGreat1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tobuya/)
+
+👤 **Author**
+
+- GitHub: [@teke85](https://github.com/teke85)
+- Twitter: [@muttau](https://twitter.com/muttau)
+- LinkedIn: [isiteketo mutau](https://www.linkedin.com/in/isiteketo-mutau-736894241/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- FUTURE FEATURES -->
 
