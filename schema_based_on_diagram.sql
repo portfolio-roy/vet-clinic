@@ -1,12 +1,18 @@
+CREATE TABLE patients(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    date_of_birth DATE
+);
+
 CREATE TABLE medical_histories (
   id SERIAL PRIMARY KEY,
   admitted_at TIMESTAMP NOT NULL,
-  patient_id INTEGER NOT NULL,
-  status VARCHAR(255) NOT NULL
+  status VARCHAR(255) NOT NULL,
+  patient_id INT NOT NULL REFERENCES patients(id)
 );
 
 CREATE TABLE treatments (
-  id SERIAL PRIMARY KEY,
+  id INT NOT NULL REFERENCES medical_histories(id) PRIMARY KEY,
   type VARCHAR(255) NOT NULL,
   name VARCHAR(255) NOT NULL
 );
@@ -26,7 +32,7 @@ CREATE TABLE invoices (
   total_amount DECIMAL,
   generated_at TIMESTAMP,
   payed_at TIMESTAMP,
-  medical_history_id INTEGER REFERENCES medical_histories(id),
+  medical_history_id INTEGER REFERENCES medical_histories(id)
 );
 
 
@@ -36,5 +42,5 @@ CREATE TABLE invoice_items (
   quantity INTEGER,
   total_price DECIMAL,
   invoice_id INTEGER REFERENCES invoices(id),
-  treatment_id INTEGER REFERENCES treatments(id),
+  treatment_id INTEGER REFERENCES treatments(id)
 );
