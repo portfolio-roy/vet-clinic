@@ -45,8 +45,6 @@ CREATE TABLE invoice_items (
   treatment_id INTEGER REFERENCES treatments(id)
 );
 
-CREATE INDEX patients_patient_id_idx ON patients (id);
-
 CREATE INDEX medical_histories_patient_id_idx ON medical_histories (patient_id);
 
 CREATE INDEX treatments_medical_history_id_idx ON treatments (id);
