@@ -45,10 +45,15 @@ CREATE TABLE invoice_items (
   treatment_id INTEGER REFERENCES treatments(id)
 );
 
-CREATE INDEX patients_name_idx ON patients (name);
+CREATE INDEX patients_patient_id_idx ON patients (id);
+
 CREATE INDEX medical_histories_patient_id_idx ON medical_histories (patient_id);
-CREATE INDEX treatments_type_idx ON treatments (type);
-CREATE INDEX treatments_name_idx ON treatments (name);
+
+CREATE INDEX treatments_medical_history_id_idx ON treatments (id);
+
 CREATE INDEX invoices_medical_history_id_idx ON invoices (medical_history_id);
+
 CREATE INDEX invoice_items_invoice_id_idx ON invoice_items (invoice_id);
+
 CREATE INDEX invoice_items_treatment_id_idx ON invoice_items (treatment_id);
+
